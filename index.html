@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Game 2026</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#2b1055">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="home">
+  <img class="logo" src="icons/icon-512.png" alt="">
+  <h1>GAME 2026</h1>
+  <button class="gbtn main" id="bPlay">▶&nbsp; Play</button>
+  <button class="gbtn" id="bExit">Exit</button>
+  <button class="gbtn" id="bSet">⚙&nbsp; Settings</button>
+</section>
+
+<div id="pw" class="modal hidden"><div class="card">
+  <h3>Enter password</h3>
+  <input id="pwIn" type="password" autocomplete="off" placeholder="Password">
+  <p id="pwErr"></p>
+  <div class="row2"><button id="pwNo" class="ghost">Cancel</button><button id="pwOk">OK</button></div>
+</div></div>
+
+<div id="who" class="modal hidden"><div class="card">
+  <h3>Who's talking?</h3>
+  <div class="row2"><button data-w="S">S</button><button data-w="L">L</button></div>
+</div></div>
+
+<section id="chat" class="hidden">
+  <header>
+    <button id="lock" title="Lock">🔒</button>
+    <div class="av" id="av"></div>
+    <div class="nm"><b id="hName"></b><small>chatting</small></div>
+    <button id="gear">⚙</button>
+  </header>
+  <main id="msgs"></main>
+  <div id="emo" class="hidden"></div>
+  <div id="rec" class="hidden"><span class="dot"></span><b id="recT">0:00</b><span class="sp"></span><button id="recX" class="ghost">✕</button><button id="recOk">Send ➤</button></div>
+  <footer>
+    <div class="bar"><button id="bEmo">😊</button><input id="txt" placeholder="Message" autocomplete="off"></div>
+    <button id="bSend" class="rb hidden">➤</button>
+    <button id="bMic" class="rb">🎤</button>
+    <button id="bImg" class="rb">🖼️</button>
+    <input type="file" id="file" accept="image/*" hidden>
+  </footer>
+</section>
+
+<div id="act" class="modal hidden"><div class="card"></div></div>
+
+<div id="set" class="modal hidden"><div class="card">
+  <h3>Edit stuff</h3>
+  <label>S's nickname</label><input id="nS" maxlength="20">
+  <label>L's nickname</label><input id="nL" maxlength="20">
+  <label>Chat theme</label><div id="themes"></div>
+  <div class="row2"><button id="setNo" class="ghost">Close</button><button id="setOk">Save</button></div>
+</div></div>
+
+<div id="view" class="hidden"><img alt=""></div>
+
+<script type="module" src="app.js"></script>
+<script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script>
+</body>
+</html>
