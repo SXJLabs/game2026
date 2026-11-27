@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.sxjlabs.twa",
+        "sha256_cert_fingerprints": ["04:1D:52:A1:C5:9B:50:A6:79:FB:C6:41:63:34:04:43:EA:30:4C:6D:8C:7E:58:3F:EA:84:B5:C9:5A:15:E5:8F"]
+      }
+    }]
